@@ -1,3 +1,22 @@
+body {
+    font-family: Exo;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &__item {
+        padding: 40px;
+    }
+}
+
 h1 {
-    color: red;
+    text-align: center;
+}
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../fonts/Exo2.0-Thin.otf") format('opentype');
 }

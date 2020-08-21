@@ -6,13 +6,31 @@ html
     body
         h1 Ты сегодня покормил кота?
         include blocks/item
-        +item({
-            color: 'blue',
-            weight: '0,5',
-            flavour: 'с фуа-гра',
-            portions: '10',
-            gift: 'мышь в подарок',
-            bottomText: 'Чего сидишь? Порадуй котэ, ',
-            link: 'купи.',
-            soldOut: false
-          })
+        .row
+            .row__item
+                +item({
+                    flavour: 'с фуа-гра',
+                    portions: '10',
+                    gift: 'мышь',
+                    weight: '0,5',
+                    bottomText: 'описание фуа-гра',
+                })
+            .row__item
+                +item({
+                    flavour: 'с рыбой',
+                    portions: '40',
+                    giftAmount: '2',
+                    gift: 'мыши',
+                    weight: '2',
+                    bottomText: 'Головы  щучьи с чесноком да свежашая сёмгушка'
+                })
+            .row__item
+                +item({
+                    flavour: 'с курой',
+                    portions: '100',
+                    giftAmount: '5',
+                    gift: 'мышей',
+                    additional: 'заказчик доволен',
+                    weight: '5',
+                    soldOut: true
+                })

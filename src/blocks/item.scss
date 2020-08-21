@@ -1,0 +1,26 @@
+.card {
+    width: 300px;
+    padding: 10px;
+    position: relative;
+
+    &__main {
+        height: 300px;
+        border: 5px solid blue;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    &__bottom {
+        text-align: center;
+        font-size: 75%;
+    }
+    &__weight {
+        position: absolute;
+        top: 75%;
+        left: 75%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: red;
+        text-align: center;
+    }
+}

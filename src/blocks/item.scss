@@ -1,26 +1,78 @@
 .card {
-    width: 300px;
-    padding: 10px;
-    position: relative;
+    width: 320px;
 
     &__main {
-        height: 300px;
-        border: 5px solid blue;
+        position: relative;
+        height: 445px;
+        border: 4px solid #1698d9;
         border-radius: 10px;
-        padding: 20px;
+        margin-bottom: 15px;
+        padding: 0 46px 25px;
+        background-color: white;
+        overflow: hidden;
     }
-    &__bottom {
-        text-align: center;
-        font-size: 75%;
+
+    &__header {
+        height: 29px;
+        margin-bottom: -1px;
+        padding: 15px 0 0 8px;
     }
-    &__weight {
+
+    &__lead {
+        color: #666;
+    }
+
+    &__heading {
+        font-size: 48px;
+        font-weight: bold;
+        margin: 0 0 15px;
+    }
+
+    &__flavour {
+        font-size: 24px;
+    }
+
+    &__image {
         position: absolute;
-        top: 75%;
-        left: 75%;
-        width: 50px;
-        height: 50px;
+        bottom: -95px;
+        left: -25px;
+        z-index: 0;
+        width: 370px;
+    }
+
+    &__info {
+        color: #666;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    &__circle {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        width: 81px;
+        height: 81px;
         border-radius: 50%;
-        background-color: red;
+        background-color: #1698d9;
         text-align: center;
+    }
+
+    &__weight {
+        position: relative;
+        top: 20px;
+        color: white;
+        font-size: 21px;
+        line-height: 22px;
+    }
+
+    &__amount {
+        font-size: 42px;
+    }
+
+    &__bottom {
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        color: white;
     }
 }

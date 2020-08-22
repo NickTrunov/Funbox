@@ -1,5 +1,42 @@
+:root {
+    height: 100%;
+    font-weight: 400;
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+
 body {
+    background: #000 url(../img/background.png);
+}
+
+.page {
+    height: inherit;
+    margin: 0;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        height: inherit;
+    }
+
+    &__inner {
+        margin: auto 0;
+    }
+}
+
+h1 {
     font-family: Exo;
+    font-size: 36px;
+    font-weight: 200;
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+}
+
+
+a {
+    text-decoration: none;
+    border-bottom: 1px dashed currentColor;
+    color: #1698d9;
 }
 
 .row {
@@ -8,15 +45,11 @@ body {
     flex-wrap: wrap;
 
     &__item {
-        padding: 40px;
+        margin: 25px 40px;
     }
 }
 
-h1 {
-    text-align: center;
-}
-
 @font-face {
-  font-family: 'Exo';
-  src: url("../fonts/Exo2.0-Thin.otf") format('opentype');
+    font-family: 'Exo';
+    src: url("../fonts/Exo2.0-Thin.otf") format('opentype');
 }

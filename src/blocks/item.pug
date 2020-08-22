@@ -2,21 +2,23 @@ mixin item(data)
     - var soldOut=false;
     .card
         .card__main
-            span Сказочное заморское явство
-            h2 Нямушка
-            h3= data.flavour
+            .card__header
+                span.card__lead Сказочное заморское яство
+            h2.card__heading Нямушка
+                .card__flavour= data.flavour
             .card__info
                 strong= data.portions 
                 span  порций
-            .card__gift
+                br
                 strong= data.giftAmount
                 span= ' '+data.gift+' в подарок'
                 br
                 span= data.additional
-            .card__weight
-                span= data.weight
-                br
-                span кг
+            img.card__image(src="img/cat.png" alt="Кот")
+            .card__circle
+                .card__weight
+                    span.card__amount= data.weight
+                    .card__measure кг
         .card__bottom
             if data.soldOut
                 span= 'Печалька, '+data.flavour+' закончился'

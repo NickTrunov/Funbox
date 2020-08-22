@@ -3,34 +3,36 @@ html
     head
         title Test task
         meta(name="viewport" content="width=device-width, initial-scale=1")
-    body
-        h1 Ты сегодня покормил кота?
-        include blocks/item
-        .row
-            .row__item
-                +item({
-                    flavour: 'с фуа-гра',
-                    portions: '10',
-                    gift: 'мышь',
-                    weight: '0,5',
-                    bottomText: 'описание фуа-гра',
-                })
-            .row__item
-                +item({
-                    flavour: 'с рыбой',
-                    portions: '40',
-                    giftAmount: '2',
-                    gift: 'мыши',
-                    weight: '2',
-                    bottomText: 'Головы  щучьи с чесноком да свежашая сёмгушка'
-                })
-            .row__item
-                +item({
-                    flavour: 'с курой',
-                    portions: '100',
-                    giftAmount: '5',
-                    gift: 'мышей',
-                    additional: 'заказчик доволен',
-                    weight: '5',
-                    soldOut: true
-                })
+    body.page
+        .page__container
+            .page__inner
+                h1 Ты сегодня покормил кота?
+                include blocks/item
+                .row
+                    .row__item
+                        +item({
+                            flavour: 'с фуа-гра',
+                            portions: '10',
+                            gift: 'мышь',
+                            weight: '0,5',
+                            bottomText: 'описание фуа-гра',
+                        })
+                    .row__item
+                        +item({
+                            flavour: 'с рыбой',
+                            portions: '40',
+                            giftAmount: '2',
+                            gift: 'мыши',
+                            weight: '2',
+                            bottomText: 'Головы  щучьи с чесноком да свежашая сёмгушка'
+                        })
+                    .row__item
+                        +item({
+                            flavour: 'с курой',
+                            portions: '100',
+                            giftAmount: '5',
+                            gift: 'мышей',
+                            additional: 'заказчик доволен',
+                            weight: '5',
+                            soldOut: true
+                        })

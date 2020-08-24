@@ -11,6 +11,10 @@
         padding: 0 46px 25px;
         background-color: white;
         overflow: hidden;
+
+        .card__body:hover & {
+            border-color: #2ea9e6;
+        }
     }
 
     &__header {
@@ -22,6 +26,10 @@
     &__corner {
         width: 43px;
         background: linear-gradient(-45deg,#fff,#fff 28.5px,#1698d9 0,#1698d9 32px,transparent 0);
+
+        .card__body:hover & {
+            background: linear-gradient(-45deg,#fff,#fff 28.5px,#2ea9e6 0,#2ea9e6 32px,transparent 0);
+        }
     }
 
     &__lead {
@@ -33,6 +41,10 @@
         border-left: none;
         border-radius: 0 12px 0 0;
         background: #fff;
+
+        .card__body:hover & {
+            border-color: #2ea9e6;
+        }
     }
 
     &__heading {
@@ -68,6 +80,10 @@
         border-radius: 50%;
         background-color: #1698d9;
         text-align: center;
+
+        .card__body:hover & {
+            background-color: #2ea9e6;
+        }
     }
 
     &__weight {

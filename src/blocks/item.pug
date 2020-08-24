@@ -1,27 +1,29 @@
 mixin item(data)
     - var soldOut=false;
     .card
-        .card__main
+        .card__body
             .card__header
-                span.card__lead Сказочное заморское яство
-            h2.card__heading Нямушка
-                .card__flavour= data.flavour
-            .card__info
-                strong= data.portions 
-                span  порций
-                br
-                strong= data.giftAmount
-                span= ' '+data.gift+' в подарок'
-                br
-                span= data.additional
-            img.card__image(src="img/cat.png" alt="Кот")
-            .card__circle
-                .card__weight
-                    span.card__amount= data.weight
-                    .card__measure кг
+                .card__corner
+                .card__lead Сказочное заморское яство
+            .card__main
+                h2.card__heading Нямушка
+                    .card__flavour= data.flavour
+                .card__info
+                    strong= data.portions 
+                    span  порций
+                    br
+                    strong= data.giftAmount
+                    span= ' '+data.gift+' в подарок'
+                    br
+                    span= data.additional
+                img.card__image(src="img/cat.png" alt="Кот")
+                .card__circle
+                    .card__weight
+                        span.card__amount= data.weight
+                        .card__measure кг
         .card__bottom
             if data.soldOut
-                span= 'Печалька, '+data.flavour+' закончился'
+                span= 'Печалька, '+data.flavour+' закончился.'
             else
                 span Чего сидишь? Порадуй котэ, 
                     a(href="#") купи.

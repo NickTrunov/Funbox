@@ -88,4 +88,14 @@
         text-align: center;
         color: white;
     }
+
+    &__sold {
+        color: #ff6;
+    }
+
+    &__link, a {
+        text-decoration: none;
+        border-bottom: 1px dashed currentColor;
+        color: #1698d9;
+    }
 }

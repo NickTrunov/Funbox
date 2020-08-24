@@ -23,8 +23,10 @@ mixin item(data)
                         .card__measure кг
         .card__bottom
             if data.soldOut
-                span= 'Печалька, '+data.flavour+' закончился.'
+                span.card__sold= 'Печалька, '+data.flavour+' закончился.'
             else
                 span Чего сидишь? Порадуй котэ, 
-                    a(href="#") купи.
+                span.card__link
+                    a(href="#") купи
+                    | .
                 

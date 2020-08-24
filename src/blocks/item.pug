@@ -1,6 +1,7 @@
 mixin item(data)
-    - var soldOut=false;
-    .card
+    if data.soldOut
+        - var soldOut='card--disabled'
+    .card(class=soldOut)
         .card__body
             .card__header
                 .card__corner

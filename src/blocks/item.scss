@@ -247,15 +247,24 @@
         color: #ff6;
     }
 
-    &__link {
+    &__buy {
         color: #1698d9;
+
+        &-button {
+            border-bottom: 1px dashed currentColor;
+            cursor: pointer;
+
+            &:hover {
+                color: #2ea9e6;
+            }
+        }
     }
 
     &__bottom-text--inactive {
         display: none;
     }
 
-    &__bottom-link--inactive {
+    &__bottom-buy--inactive {
         display: none;
     }
 }

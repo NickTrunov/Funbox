@@ -31,8 +31,8 @@ mixin item(data)
             else
                 .card__bottom-text.card__bottom-text--inactive
                     span= data.bottomText
-                .card__bottom-link
-                    span Чего сидишь? Порадуй котэ, 
-                    span.card__link
-                        a.js-card__link(href="javascript:void(0);") купи
+                .card__bottom-buy
+                    | Чего сидишь? Порадуй котэ, 
+                    span.card__buy
+                        span.card__buy-button.js-card__buy-button купи
                         | .

@@ -2,11 +2,14 @@
     width: 320px;
     color: #666;
     user-select: none;
-    cursor: pointer;
 
-    &--disabled {
-        color: hsla(0,0%,70%,.5);
-        cursor: default;
+    &__body {
+        cursor: pointer;
+
+        &--disabled {
+            color: hsla(0,0%,70%,.5);
+            cursor: default;
+        }
     }
 
     &__main {
@@ -24,14 +27,29 @@
             border-color: #2ea9e6;
         }
 
-        .card--disabled & {
+        .card__body--disabled & {
             border-color: #b3b3b3;
         }
 
-        .card--disabled:hover & {
+        .card__body--disabled:hover & {
             border-color: #b3b3b3;
         }
 
+        .card__body--active & {
+            border-color: #d91667;
+        }
+
+        .card__body--active:hover & {
+            border-color: #e62e7a;
+        }
+
+        .card__body--active.card__body--no-hover & {
+            border-color: #d91667;  
+        }
+
+        .card__body--inactive.card__body--no-hover & {
+            border-color: #1698d9;  
+        }
     }
 
     &__header {
@@ -48,12 +66,28 @@
             background: linear-gradient(-45deg,#fff,#fff 28.5px,#2ea9e6 0,#2ea9e6 32px,transparent 0);
         }
 
-        .card--disabled & {
+        .card__body--disabled & {
             background: linear-gradient(-45deg,#fff,#fff 28.5px,#b3b3b3 0,#b3b3b3 32px,transparent 0);
         }
 
-        .card--disabled:hover & {
+        .card__body--disabled:hover & {
             background: linear-gradient(-45deg,#fff,#fff 28.5px,#b3b3b3 0,#b3b3b3 32px,transparent 0);
+        }
+
+        .card__body--active & {
+            background: linear-gradient(-45deg,#fff,#fff 28.5px,#d91667 0,#d91667 32px,transparent 0);
+        }
+
+        .card__body--active:hover & {
+            background: linear-gradient(-45deg,#fff,#fff 28.5px,#e62e7a 0,#e62e7a 32px,transparent 0);
+        }
+
+        .card__body--active.card__body--no-hover & {
+            background: linear-gradient(-45deg,#fff,#fff 28.5px,#d91667 0,#d91667 32px,transparent 0);
+        }
+
+        .card__body--inactive.card__body--no-hover & {
+            background: linear-gradient(-45deg,#fff,#fff 28.5px,#2ea9e6 0,#2ea9e6 32px,transparent 0); 
         }
     }
 
@@ -66,16 +100,53 @@
         border-radius: 0 12px 0 0;
         background: #fff;
 
+        &--active {
+            color: #e62e7a;
+            display: none;
+        }
+
         .card__body:hover & {
             border-color: #2ea9e6;
         }
 
-        .card--disabled & {
+        .card__body--disabled & {
             border-color: #b3b3b3;
         }
 
-        .card--disabled:hover & {
+        .card__body--disabled:hover & {
             border-color: #b3b3b3;
+        }
+
+        .card__body--active & {
+            border-color: #d91667;
+        }
+
+        .card__body--active:hover & {
+            border-color: #e62e7a;
+
+            &--active {
+                display: block;
+            }
+
+            &--inactive {
+                display: none;
+            }
+        }
+
+        .card__body--active.card__body--no-hover & {
+            border-color: #d91667;
+
+            &--active {
+                display: none;
+            }
+
+            &--inactive {
+                display: block;
+            }
+        }
+
+        .card__body--inactive.card__body--no-hover & {
+            border-color: #1698d9;  
         }
     }
 
@@ -85,7 +156,7 @@
         font-weight: bold;
         margin: 0 0 15px;
 
-        .card--disabled & {
+        .card__body--disabled & {
             color: inherit;
         }
     }
@@ -101,7 +172,7 @@
         z-index: 0;
         width: 370px;
 
-        .card--disabled & {
+        .card__body--disabled & {
         opacity: .5;
         }
     }
@@ -118,19 +189,38 @@
         width: 81px;
         height: 81px;
         border-radius: 50%;
-        background-color: #1698d9;
         text-align: center;
 
-        .card__body:hover & {
+        .card__body--inactive & {
+            background-color: #1698d9;
+        }
+
+        .card__body--inactive:hover & {
             background-color: #2ea9e6;
         }
 
-        .card--disabled & {
+        .card__body--disabled & {
             background-color: #b3b3b3;
         }
 
-        .card--disabled:hover & {
+        .card__body--disabled:hover & {
             background-color: #b3b3b3;
+        }
+
+        .card__body--active & {
+            background-color: #d91667;
+        }
+
+        .card__body--active:hover & {
+            background-color: #e62e7a;
+        }
+
+        .card__body--active.card__body--no-hover & {
+            background-color: #d91667;  
+        }
+
+        .card__body--inactive.card__body--no-hover & {
+            background-color: #1698d9;  
         }
     }
 
@@ -159,5 +249,13 @@
 
     &__link {
         color: #1698d9;
+    }
+
+    &__bottom-text--inactive {
+        display: none;
+    }
+
+    &__bottom-link--inactive {
+        display: none;
     }
 }

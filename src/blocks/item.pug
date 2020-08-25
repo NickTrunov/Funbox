@@ -1,11 +1,14 @@
 mixin item(data)
     if data.soldOut
-        - var soldOut='card--disabled'
-    .card(class=soldOut)
-        .card__body
+        - var soldOut='card__body--disabled';
+    else
+        - var soldOut='js-card__body';
+    .card
+        .card__body.card__body--inactive(class=soldOut)
             .card__header
                 .card__corner
-                .card__lead Сказочное заморское яство
+                .card__lead.card__lead--inactive Сказочное заморское яство
+                .card__lead.card__lead--active Котэ не одобряет?
             .card__main
                 h2.card__heading Нямушка
                     .card__flavour= data.flavour
@@ -26,7 +29,10 @@ mixin item(data)
             if data.soldOut
                 span.card__sold= 'Печалька, '+data.flavour+' закончился.'
             else
-                span Чего сидишь? Порадуй котэ, 
-                span.card__link
-                    a(href="#") купи
-                    | .
+                .card__bottom-text.card__bottom-text--inactive
+                    span= data.bottomText
+                .card__bottom-link
+                    span Чего сидишь? Порадуй котэ, 
+                    span.card__link
+                        a.js-card__link(href="javascript:void(0);") купи
+                        | .

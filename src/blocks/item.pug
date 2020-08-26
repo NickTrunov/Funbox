@@ -37,15 +37,15 @@ mixin item(data)
                     .card__bottom-text
                         span= data.bottomText
                     .card__bottom-buy.card__bottom-buy--inactive
-                        | Чего сидишь? Порадуй котэ, 
-                        span.card__buy
-                            span.card__buy-button.js-card__buy-button купи
-                            | .
+                        +bottomBuy()
                 else
                     .card__bottom-text.card__bottom-text--inactive
                         span= data.bottomText
                     .card__bottom-buy
-                        | Чего сидишь? Порадуй котэ, 
-                        span.card__buy
-                            span.card__buy-button.js-card__buy-button купи
-                            | .
+                        +bottomBuy()
+
+mixin bottomBuy()
+    | Чего сидишь? Порадуй котэ, 
+    span.card__buy
+        span.card__buy-button.js-card__buy-button купи
+        | .

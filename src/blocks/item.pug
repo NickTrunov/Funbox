@@ -3,8 +3,12 @@ mixin item(data)
         - var soldOut='card__body--disabled';
     else
         - var soldOut='js-card__body';
+    if data.isSelected
+        - var isSelected='active';
+    else
+        - var isSelected='inactive';
     .card
-        .card__body.card__body--inactive(class=soldOut)
+        .card__body(class=soldOut)(class='card__body--'+isSelected)
             .card__header
                 .card__corner
                 .card__lead.card__lead--inactive Сказочное заморское яство
@@ -29,10 +33,19 @@ mixin item(data)
             if data.soldOut
                 span.card__sold= 'Печалька, '+data.flavour+' закончился.'
             else
-                .card__bottom-text.card__bottom-text--inactive
-                    span= data.bottomText
-                .card__bottom-buy
-                    | Чего сидишь? Порадуй котэ, 
-                    span.card__buy
-                        span.card__buy-button.js-card__buy-button купи
-                        | .
+                if data.isSelected
+                    .card__bottom-text
+                        span= data.bottomText
+                    .card__bottom-buy.card__bottom-buy--inactive
+                        | Чего сидишь? Порадуй котэ, 
+                        span.card__buy
+                            span.card__buy-button.js-card__buy-button купи
+                            | .
+                else
+                    .card__bottom-text.card__bottom-text--inactive
+                        span= data.bottomText
+                    .card__bottom-buy
+                        | Чего сидишь? Порадуй котэ, 
+                        span.card__buy
+                            span.card__buy-button.js-card__buy-button купи
+                            | .
